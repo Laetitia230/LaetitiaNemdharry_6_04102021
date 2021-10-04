@@ -1,8 +1,8 @@
 const passwordValidator = require('password-validator');
 // Create a schema
-const passwordschema = new passwordValidator();
+const passwordSchema = new passwordValidator();
 // Add properties to it
-passwordschema
+passwordSchema
 .is().min(8)                                    // Longueur minimal 8
 .is().max(100)                                  // Longueur maximum 100
 .has().uppercase()                              // Doit contenir une lettre majuscule
@@ -11,4 +11,5 @@ passwordschema
 .has().symbols(1)                               // Contient 1 caractere spécial 
 .has().not().spaces()                           // Ne doit pas contenir d'espace
 .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklister ses valeurs
+console.log(passwordSchema.validate('joke', { list: true }));
 module.exports = passwordschema;
