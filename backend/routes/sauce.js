@@ -14,4 +14,6 @@ router.put('/:id',auth,multer, sauceCtrl.modifySauce);
 router.delete('/:id',auth, sauceCtrl.deleteSauce);
 //affichage page produit
 router.get('/',auth, sauceCtrl.getAllSauces);
+//creer un like ou dislike
+router.post("/:id/like", auth, sauceCtrl.likeSauce); 
 module.exports = router;
