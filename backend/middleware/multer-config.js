@@ -11,7 +11,7 @@ fs.mkdir("./images", function(image) {
   if(!image || (image && image.code === 'EEXIST')){
     console.log("Dossier déjà existant!")
   } else {
-    console.log("New directory successfully created.")
+    console.log("Votre dossier à bien été crée.")
   }
 })
 
