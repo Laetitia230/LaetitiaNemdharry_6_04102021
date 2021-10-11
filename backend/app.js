@@ -23,7 +23,7 @@ app.use((req, res, next) => {
   app.use(helmet());
   app.use(express_enforces_ssl());
 module.exports = app;
-
+// Connexion à mangoDB
 mongoose.connect('mongodb+srv://LN:yatasha@cluster0.fszbs.mongodb.net/LN?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
