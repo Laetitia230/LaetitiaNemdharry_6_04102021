@@ -9,6 +9,9 @@ const MIME_TYPES = {
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
+    if(!Directory.Exists(images)){
+      Directory.CreateDirectory(images);
+    }
     callback(null, 'images');
   },
   filename: (req, file, callback) => {
