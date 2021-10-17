@@ -12,4 +12,4 @@ passwordSchema
 .has().not().spaces()                           // Ne doit pas contenir d'espace
 .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklister ses valeurs
 console.log(passwordSchema.validate('joke', { list: true }));
-module.exports = passwordschema;
+module.exports = passwordSchema;

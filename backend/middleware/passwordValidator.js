@@ -1,4 +1,4 @@
-const passwordSchema = require('../models/passwordValidator');
+const passwordSchema = require('../models/password');
 
 //Renforcer et sécuriser les mots de passe entrant
 module.exports = (req, res, next) => {

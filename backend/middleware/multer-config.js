@@ -13,7 +13,7 @@ fs.mkdir("./images", function(image) {
   } else {
     console.log("Votre dossier à bien été crée.")
   }
-})
+});
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
